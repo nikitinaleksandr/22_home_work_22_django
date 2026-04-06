@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Skystore{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- ШАПКА (общая для всех страниц) -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Сайт товаров</a>
+        </div>
+    </nav>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ (будет меняться) -->
+    <div class="container mt-5">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- ПОДВАЛ (общий для всех страниц) -->
+    <footer class="bg-light text-center p-3 mt-5">
+        <div class="container">
+            <p>&copy; 2024 Skystore. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+
+
