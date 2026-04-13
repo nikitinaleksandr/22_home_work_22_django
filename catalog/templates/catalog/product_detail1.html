@@ -9,11 +9,11 @@
 <body>
     <div class="contaiter mt-5">
     <h1 class="mb-4">Информация о товаре</h1>
-    <p>Название: {{ product.name|upper }}</p>
-    <p>Цена: {{ product.price  }}</p>
-    <p>Дата производства: {{ product.create_at|date:"d M Y"}}</p>
-    <p>Комментарий: {{product.comment | default:"Комментарий отсутствует"}}</p>
-    <p>Описание: {{product.descriptions | truncatechars:100}}</p>
+    <p>Название: {{ object.name|upper }}</p>
+    <p>Цена: {{ object.price  }}</p>
+    <p>Дата производства: {{ object.create_at|date:"d M Y"}}</p>
+    <p>Комментарий: {{object.comment | default:"Комментарий отсутствует"}}</p>
+    <p>Описание: {{object.descriptions | truncatechars:100}}</p>
     </div>
     <script src="/static/js/bootstrap.bundle.min.js"></script>
 </body>

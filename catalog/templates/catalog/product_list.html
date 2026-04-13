@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'catalog/base.html' %}
 
 {% block title %}Список товаров{% endblock %}
 
@@ -12,8 +12,8 @@
 </div>
 
 <div class="row">
-    {% for product in product %}
-        {% include 'includes/inc_card.html' with product=product %}
+    {% for product in object_list %}
+        {% include 'catalog/includes/inc_card.html' with product=product %}
     {% empty %}
         <div class="col-12">
             <div class="alert alert-info text-center">Товары не найдены</div>
