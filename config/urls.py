@@ -25,7 +25,10 @@ from catalog.views import ExampleView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('catalog.urls', namespace='catalog')),
+    path('blog/', include('blog.urls')),
+
+
+    # path('', include('catalog.urls', namespace='catalog')),
     path('example', views.ExampleView.as_view(), name='example'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
