@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product_info</title>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="contaiter mt-5">
+    <h1 class="mb-4">Информация о товаре</h1>
+    <p>Название: {{ object.name|upper }}</p>
+    <p>Цена: {{ object.price  }}</p>
+    <p>Дата производства: {{ object.create_at|date:"d M Y"}}</p>
+    <p>Комментарий: {{object.comment | default:"Комментарий отсутствует"}}</p>
+    <p>Описание: {{object.descriptions | truncatechars:100}}</p>
+    </div>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

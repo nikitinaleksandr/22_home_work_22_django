@@ -1,0 +1,17 @@
+
+
+
+{% extends 'catalog/base.html' %}
+
+{% block title %}Информация о товаре{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Информация о товаре</h1>
+
+    {% include 'catalog/includes/inc_card.html' with product=product full_width=True %}
+
+    <a href="/product_list/" class="btn btn-secondary mt-3">← Назад к списку</a>
+</div>
+{% endblock %}
+
